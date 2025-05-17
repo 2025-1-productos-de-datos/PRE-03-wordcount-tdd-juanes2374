@@ -3,7 +3,6 @@
 import os
 import subprocess
 
-
 def test_homework():
     """Test Word Count"""
 
@@ -20,8 +19,9 @@ def test_homework():
             raise Exception(f"'{path}' directory does not exist")
 
     try:
+        # Cambiado 'python3' por 'python' para compatibilidad en Windows
         subprocess.run(
-            ["python3", "-m", "homework", "data/input", "data/output"],
+            ["python", "-m", "homework", "data/input", "data/output"],
             check=True,
         )
     except subprocess.CalledProcessError as e:
